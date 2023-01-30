@@ -18,15 +18,31 @@ h1 {
   width: 100vw;
   height: 6vh;
 }
-.rowDiv {
+.rowDiv, .rowDiv0 {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   /* background-color: burlywood; */
   width: 60vw;
-  /* height: 6vh; */
+  height: 6vh;
   border-bottom: 1px solid black;
+}
+.rowDiv0 {
+  background-color: navy;
+  color: white;
+}
+.rowDiv:hover, rowDiv:active {
+  background-color: aliceblue;
+}
+.rowDay {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 60vw;
+  height: 6vh; 
+  background-color: darksalmon;
+  padding: 20px 0px 20px 20px;
 }
 .col {
   display: inline-flex;
@@ -45,4 +61,10 @@ h1 {
 }
 #colrankInten {
   width: 10%;
+}
+.spup {
+  color: red;
+}
+.spdown {
+  color: blue;
 }
