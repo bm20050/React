@@ -1,0 +1,48 @@
+.bheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: beige;
+  color: black;
+}
+h1 {
+  font-size: 5vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+}
+.rowDiv {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* background-color: burlywood; */
+  width: 60vw;
+  /* height: 6vh; */
+  border-bottom: 1px solid black;
+}
+.col {
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center;
+  height: 6vh;
+}
+#colrank {
+  width: 10%;
+}
+#colmovieNm {
+  width: 60%;
+}
+#colaudiAcc {
+  width: 20%;
+}
+#colrankInten {
+  width: 10%;
+}
