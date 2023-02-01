@@ -1,7 +1,9 @@
 import './Frcst.css';
-import Mainbox1 from './Mainbox1'
-import Mainbox2 from './Mainbox2'
-import { useState } from "react";
+import Frcheader from './Frcheader';
+import Frcdt from './Frcdt';
+import Frccn from './Frccn';
+
+import { useState, useEffect } from "react";
 
 const Frcst = () => {
   /* 공공데이터포털 : 한국환경공단_에어코리아_대기오염정보
@@ -15,7 +17,7 @@ const Frcst = () => {
   frcstThreeDt : 셋째날예보일시
   frcstFourDt : 넷째날예보일시
   */
-  let [info, setInfo] = useState();
+
 
   const items = [{
     "frcstFourDt": "2023-02-05",
@@ -29,39 +31,63 @@ const Frcst = () => {
     "frcstOneCn": "서울 : 낮음, 인천 : 낮음, 경기북부 : 낮음, 경기남부 : 낮음, 강원영서 : 낮음, 강원영동 : 낮음, 대전 : 낮음, 세종 : 낮음, 충남 : 낮음, 충북 : 낮음, 광주 : 낮음, 전북 : 낮음, 전남 : 낮음, 부산 : 낮음, 대구 : 낮음, 울산 : 낮음, 경북 : 낮음, 경남 : 낮음, 제주 : 낮음, 신뢰도 : 높음",
     "presnatnDt": "2023-01-30"
   }];
-  const showInfo = (seldt) => {
-    let infoArry;
-    switch (seldt) {
-      case 1: infoArry = item.frcstOneCn.split(','); break;
-      case 2: infoArry = item.frcstTwoCn.split(','); break;
-      case 3: infoArry = item.frcstThreeCn.split(','); break;
-      case 4: infoArry = item.frcstFourCn.split(','); break;
-      default: break;
-    }
-    // infoArry = infoArry.map((v) => <li key={`${v} - ${seldt}`}>{v}</li>)
-    infoArry = infoArry.map((v) =>
-      v.includes("높음") ?
-        <li key={v + '-' + seldt} >
-          <span>{v.split(':')[0]} : </span>
-          <span className="lired">{v.split(':')[1]}</span></li> :
-        <li key={v + '-' + seldt}>{v}</li>
-    );
-    console.log(infoArry);
-    setInfo(infoArry);
-  }
 
-  let item = items[0];
-  console.log(items[0]);
+  
+
+  let frcdt = ["frcstOneDt", "frcstTwoDt", "frcstThreeDt", "frcstFourDt"]
+  let frccn = ["frcstOneCn", "frcstTwoCn", "frcstThreeCn", "frcstFourCn"]
+
+  frcdt = frcdt.map((k) => items[0][k]);
+  frccn = frccn.map((k) => items[0][k]);
+
+  // console.log(fcrdt);
+  // console.log(fcrcn);
+  let frcobj = {};
+  for (let [idx, k] of frcdt.entries()) {
+    // console.log('idx=', idx, 'value=', k, 'cnvalue=', fcrcn[idx])
+    frcobj[k] = frccn[idx];
+  }
+  // console.log(frcobj);
+
+  // let item = items[0];
+
+  // let cn = [];
+  // let dt = [];
+  // const num = ["One", "Two", "Three", "Four"];
+  // for (let n of num) {
+  //   for (let k of Object.keys(item)) {
+  //     if (k.includes(n) && k.includes("Cn")){
+  //       cn.push(item[k]);
+  //       break;
+  //     } 
+  //   }
+  // }
+  // for (let n of num) {
+  //   for (let k of Object.keys(item)) {
+  //     if (k.includes(n) && k.includes("Dt")) {
+  //       dt.push(item[k]);
+  //       break;
+  //     }
+  //   }
+  // }
+  // console.log(cn);
+  // console.log(dt);
+  let [cn, setCn] = useState(frcobj["2023-02-02"]);
+  let [dt, setDt] = useState();
+
+  useEffect(() => {
+    console.log(frcobj[dt]);
+    frcobj[dt] && setCn(frcobj[dt]);
+  }, [dt]);
   return (
-    <div className="content">
-      <div className="header">
-        <h1>미세먼지예보</h1>
-      </div>
+    <>
+      <Frcheader />
+      {/* <p>{dt}</p> */}
       <div className="main">
-        <Mainbox1 item={item} showInfo={showInfo} />
-        <Mainbox2 info={info} />
+        <Frcdt frcdt={frcdt} setDt={setDt} />
+        <Frccn cn={cn} />
       </div>
-    </div>
+    </>
   );
 }
 
