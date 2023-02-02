@@ -1,5 +1,5 @@
-const Frcdt = ({frcdt, setDt}) => {
-
+const Frcdt = ({ frcdt, setDt }) => {
+  console.log("frcdt-dt", frcdt)
   let dtdiv1Tag = [...frcdt];
   const show = (v) => {
     // console.log(v);
@@ -15,6 +15,5 @@ const Frcdt = ({frcdt, setDt}) => {
       {dtdiv1Tag}
     </div>
   );
-
 }
 export default Frcdt;

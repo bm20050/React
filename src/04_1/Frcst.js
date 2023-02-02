@@ -18,7 +18,6 @@ const Frcst = () => {
   frcstFourDt : 넷째날예보일시
   */
 
-
   const items = [{
     "frcstFourDt": "2023-02-05",
     "frcstThreeDt": "2023-02-04",
@@ -32,8 +31,6 @@ const Frcst = () => {
     "presnatnDt": "2023-01-30"
   }];
 
-  
-
   let frcdt = ["frcstOneDt", "frcstTwoDt", "frcstThreeDt", "frcstFourDt"]
   let frccn = ["frcstOneCn", "frcstTwoCn", "frcstThreeCn", "frcstFourCn"]
 
@@ -42,6 +39,8 @@ const Frcst = () => {
 
   // console.log(fcrdt);
   // console.log(fcrcn);
+  
+  // 일자별 예보 오브젝트 생성
   let frcobj = {};
   for (let [idx, k] of frcdt.entries()) {
     // console.log('idx=', idx, 'value=', k, 'cnvalue=', fcrcn[idx])
@@ -76,7 +75,7 @@ const Frcst = () => {
   let [dt, setDt] = useState();
 
   useEffect(() => {
-    console.log(frcobj[dt]);
+    // console.log(frcobj[dt]);
     frcobj[dt] && setCn(frcobj[dt]);
   }, [dt]);
   return (
@@ -85,7 +84,7 @@ const Frcst = () => {
       {/* <p>{dt}</p> */}
       <div className="main">
         <Frcdt frcdt={frcdt} setDt={setDt} />
-        <Frccn cn={cn} />
+        {dt && <Frccn cn={cn} />}
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 const Mydiv11 = (probs) => {
   const user = probs.user;
-  console.log("div11", probs);
+  // console.log("div11", probs);
   return (
     <div className="mydiv11">
       <h3 className="divh3">Mydiv11{user}</h3>

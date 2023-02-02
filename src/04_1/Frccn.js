@@ -1,5 +1,6 @@
 const Frccn = ({ cn }) => {
   // console.log(cn)
+  
   let infoArry = cn.split(',');
   infoArry = infoArry.map((v) =>
     v.includes("높음") ?

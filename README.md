@@ -5,6 +5,8 @@
 + 01.27: 02 박스오피스
 ## React Project3
 + 01.30: 03 컴포넌트 
++ 02.02: 03 useState, useEffect
 ## React Project4
 + 01.31: 04 미세먼지예보
 + 02.01: 04_1 미세먼지예보 수정
++ 02.02: 04_1 useState, useEffect
