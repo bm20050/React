@@ -1,9 +1,9 @@
 import './App.css';
-import Frcst from './04_1/Frcst'
+import Taccident from './05/Taccident';
 
 const App = () => {
   return (
-    <Frcst />
+    <Taccident />
   );
 }
 
