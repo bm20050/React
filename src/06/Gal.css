@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 .galmenu {
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 550px;
   height: 90vh;
 }
 .galcontent {
@@ -22,7 +22,7 @@
   align-items: left;
   border: 1px solid;
   border-radius: 10px;
-  width: 45%;
+  width: 550px;
   height: 80vh;
   background-color: navy;
 }
