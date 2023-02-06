@@ -1,9 +1,9 @@
 import './App.css';
-import Taccident from './05/Taccident';
+import Gal from './06/Gal'
 
 const App = () => {
   return (
-    <Taccident />
+    <Gal />
   );
 }
 

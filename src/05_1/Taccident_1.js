@@ -1,8 +1,8 @@
-import Taccidentm from "./Taccidentm";
-import "./Taccident.css";
+import Taccidentm_1 from "./Taccidentm_1";
+import "./Taccident_1.css";
 
 
-const Taccident = () => {
+const Taccident_1 = () => {
   const apiData = {
     "currentCount": 15,
     "data": [
@@ -174,16 +174,16 @@ const Taccident = () => {
   // );
 
   // 자바스크립트 object는 키와 값으로 분리가능 => 배열
-  // let objk = Object.keys(apiData);
-  // let objv = Object.values(apiData);
+  let objk = Object.keys(apiData);
+  let objv = Object.values(apiData);
   
-  // // 배열의 map
-  // // 배열의 filter
-  // data = objk.filter((item) => item === 'data')
+  // 배열의 map
+  // 배열의 filter
+  data = objk.filter((item) => item === 'data')
 
-  // // 오브젝트 키로 접근
-  // data = apiData.data;
-  // data = apiData["data"]
+  // 오브젝트 키로 접근
+  data = apiData.data;
+  data = apiData["data"]
 
   // 배열의 entries
   // for (let[k, v] of c2.entries) {
@@ -196,8 +196,8 @@ const Taccident = () => {
 
   // 
   return ( 
-      <Taccidentm c1={c1} c2={c2} data={data} />
+      <Taccidentm_1 c1={c1} c2={c2} data={data} />
   );
 }
 
-export default Taccident;
+export default Taccident_1;

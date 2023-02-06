@@ -1,23 +1,16 @@
-const Tc2 = ({c2d, data, setData1}) => {
-  // console.log(c2d);
-  const show2 = (item) => {
-    // console.log(item);
-    let temp = [];
-    for (let i of data){
-      if (i["사고유형_중분류"] === item)
-        temp.push(i)
-    }
-    // console.log(temp)
-    setData1(temp);
-  }
-  let c2Tag = [...c2d];
-  c2Tag = c2Tag.map((item) => <div className="c2Tag" onClick={() => show2(item)}>{item}</div>)
-   return (
+const Tc2 = ({ selC2A, setSelC2, selC2 }) => {
+  const handleSelect = (item) => {
+    setSelC2(item[1])
+  };
+  // 중분류 화면 표시 태그
+  const c2Tag = selC2A.map((item) =>
+    <div className={item[1] === selC2 ? "tcardSel" : "tcard"} onClick={() => handleSelect(item)}>{item[1]}</div>
+  );
+
+  return (
     <div className="tc2">
       <h2>중분류</h2>
-      <div className="tc2menu">
-        {c2Tag}
-      </div>
+      {c2Tag}
     </div>
   );
 }
