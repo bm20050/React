@@ -134,7 +134,7 @@ const Gal = () => {
 
   return (
     <>
-      <Galmain title={title} data1={data1}/>
+      <Galmain title={title} data1={data1} />
     </>
   );
 }

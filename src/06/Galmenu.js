@@ -1,11 +1,12 @@
-const Galmenu = ({title, selTitle, setSelTitle}) => {
+const Galmenu = ({ title, selTitle, setSelTitle }) => {
 
   const handleSelect = (item) => {
     console.log(item);
     setSelTitle(item);
   }
+  let v = 0;
   const titleTag = title.map((item) =>
-   <div className={item === selTitle ? "titleTagSel" : "titleTag"} onClick={() => handleSelect(item)}>{item}</div>
+    <div className={item === selTitle ? "titleTagSel" : "titleTag"} key={item + v++} onClick={() => handleSelect(item)}>{item}</div>
   )
 
   return (
