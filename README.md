@@ -17,3 +17,5 @@
 ## React Project6
 + 02.06: 06 한국관광공사_관광사진 정보
   - 호스팅 주소 : https://react06-gal.web.app/
+## React Project7
++ 02.07: 07 컴포넌트 내부 변수, state 변수, useRef 변수, form

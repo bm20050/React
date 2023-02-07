@@ -1,9 +1,9 @@
 import './App.css';
-import Gal from './06/Gal'
+import Mycom from './07/Mycom';
 
 const App = () => {
   return (
-    <Gal />
+    <Mycom />
   );
 }
 
