@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Galmain = ({title, data1}) => {
   let [selTitle, setSelTitle] = useState();
-  let [selContent, setSelContent] = useState([]);
+  let [selContent, setSelContent] = useState();
   
   useEffect (() => {
     if (selTitle) {
@@ -15,7 +15,7 @@ const Galmain = ({title, data1}) => {
   return (
     <div className="galmain">
       <Galmenu title={title} selTitle={selTitle} setSelTitle={setSelTitle}/>
-      <Galcontent selContent={selContent}/>
+      {selContent && <Galcontent selContent={selContent}/>}
     </div>
   );
 }

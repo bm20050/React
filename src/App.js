@@ -1,9 +1,10 @@
 import './App.css';
-import Mycom from './07/Mycom';
+// import Myform from './08/Myform';
+import Gal from './06/Gal';
 
 const App = () => {
   return (
-    <Mycom />
+    <Gal />
   );
 }
 
