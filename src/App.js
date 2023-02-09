@@ -1,10 +1,11 @@
 import './App.css';
-// import Myform from './08/Myform';
-import Gal from './06/Gal';
-
+import RouterMain from './09/RouterMain'
+import { BrowserRouter } from 'react-router-dom'
 const App = () => {
   return (
-    <Gal />
+    <BrowserRouter>
+      <RouterMain />
+    </BrowserRouter>
   );
 }
 

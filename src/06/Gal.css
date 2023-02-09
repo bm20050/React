@@ -80,3 +80,22 @@ button {
   color: white;
   font-size: 1em;
 }
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; 
+  width: 510px;
+  background-color: beige;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+select {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
