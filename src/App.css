@@ -37,12 +37,3 @@
     transform: rotate(360deg);
   }
 }
-
-a {
-  text-decoration: none;
-  color: white;
-}
-a:hover, a:active {
-  background-color: lightgray;
-  color: black;
-}
