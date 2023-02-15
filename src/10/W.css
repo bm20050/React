@@ -70,6 +70,32 @@
   font-size: 3em;
   border-radius: 10px;
 }
-.w1, .w2 {
+.w1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 50px;
+  
+}
+.sp0, .sp1, .sp2 {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1em;
+  border-bottom: 1px solid gray;
+}
+.sp0 {
+  justify-content: right;
 
+  width: 30%;
+}
+.sp1 {
+  justify-content: center;
+
+  width: 20%;
+}
+.sp2 {
+  justify-content: left;
+  width: 20%
 }

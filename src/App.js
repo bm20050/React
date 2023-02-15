@@ -1,10 +1,10 @@
 import './App.css';
-import Wmain from './10/Wmain'
 import { BrowserRouter } from 'react-router-dom'
+import BoxOffice from './11/BoxOffice';
 const App = () => {
   return (
     <BrowserRouter>
-      <Wmain />
+      <BoxOffice/>
     </BrowserRouter>
   );
 }

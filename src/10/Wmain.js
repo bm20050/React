@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import './Wmain.css';
+import './W.css';
 import Wmenu from './Wmenu';
 import W1 from './W1'
 import W2 from './W2';
