@@ -14,9 +14,9 @@ const BoxOffice = () => {
   }, []);
 
   // targetDt 변경 시
-  useEffect(() => {
-    // console.log(targetDt)
-  }, [targetDt])
+  // useEffect(() => {
+  //   // console.log(targetDt)
+  // }, [targetDt])
   
   // input 이벤트
   const handleMv = () => {
@@ -33,7 +33,7 @@ const BoxOffice = () => {
         </form>
       </div>
       <div className="mvmain">
-        <BoxOfficeList targetDt={targetDt} />
+        {targetDt && <BoxOfficeList targetDt={targetDt} />}
       </div>
     </>
   );

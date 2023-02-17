@@ -8,24 +8,104 @@
   background-color: navy;
   color: white;
 }
-.mvh > h1, .mvh > form {
+
+.mvh>h1,
+.mvh>form {
   display: flex;
   justify-content: center;
-  
+
 }
-.mvh > h1 {
+
+.mvh>h1 {
   width: 70%;
   align-items: center;
 }
-.mvh > form {
+
+.mvh>form {
   width: 30%;
   align-items: left;
 }
 
-input  {
+input {
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
+.a {
+  display: flex;
+  flex-direction: row;
+  justify-content: top;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+  margin-top: 10px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+}
+.rowDiv,
+.rowDiv0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 6vh;
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+}
 
+.rowDiv0 {
+  background-color: green;
+  color: white;
+}
+
+.rowDiv:hover,
+.rowDiv:active {
+  background-color: beige;
+}
+
+.col {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+}
+
+#colrank {
+  width: 10%;
+}
+
+#colmovieNm {
+  width: 60%;
+}
+
+#colaudiAcc {
+  width: 20%;
+}
+
+#colrankInten {
+  width: 10%;
+}
+
+.spup {
+  color: red;
+}
+
+.spdown {
+  color: blue;
+}
