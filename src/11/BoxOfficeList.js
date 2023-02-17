@@ -5,8 +5,17 @@ const BoxOfficeList = ({ targetDt }) => {
 
   const [mvlist, setMvlist] = useState([]);
   const [mvCd, setMvCd] = useState();
+  let today = new Date();
+  today = today.toLocaleDateString().replaceAll(".", "").replaceAll(" ", "");
+  
+  if (parseInt(today.substr(4, 8)) < 1000)
+    today = today.substr(0, 4) + "0" + today.substr(4, 8);
   useEffect(() => {
     if (!targetDt) return;
+    if (targetDt >= today) {
+      alert("오늘 이전 날짜를 선택해 주세요.")
+      return;
+    }
     const apikey = 'abca8b86cc572883d6fac0633a6576df';
     let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apikey}&targetDt=${targetDt}`;
 
